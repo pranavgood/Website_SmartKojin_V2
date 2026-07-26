@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { NAV, SMARTENVIRO } from "../lib/content";
-import { Wordmark } from "./UI";
 
 export default function Header({ activePath }) {
   const [open, setOpen] = useState(false);
@@ -64,7 +63,7 @@ export default function Header({ activePath }) {
       <header className="site-header">
         <div className="container header-inner">
           <Link href="/" className="logo" onClick={handleLogoClick}>
-            <Wordmark size="lg" />
+            <img src="/images/smart-kojin-logo.png" alt="SMART Kojin logo" className="site-logo-img" />
           </Link>
 
           <button

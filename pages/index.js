@@ -11,6 +11,9 @@ import {
   Statement,
   LogoWall,
   IndustryIcon,
+  IndianWomenIllustration,
+  WhatWeFight,
+  ThreeDignities,
 } from "../components/UI";
 import {
   EDUCATION_SHORT,
@@ -94,7 +97,7 @@ export default function Home({ activePath }) {
       <section className="credibility-strip">
         <div className="container credibility-inner">
           <div className="credibility-brand">
-            <img src={LOGO} alt="SMART Kojin logo" />
+            <img src="/images/smart-kojin-logo.png" alt="SMART Kojin logo" className="site-logo-img" />
           </div>
           {SMARTENVIRO.stats.map((s) => (
             <div className="credibility-item" key={s.label}>
@@ -116,8 +119,7 @@ export default function Home({ activePath }) {
           <Statement
             eyebrow="The Real Problem"
             heading="Disposal shouldn't be the hardest part of someone's day."
-            photoCaption="Real photo: a washroom with SMART Kojin installed, or a respectful, non-stock lifestyle shot — avoid clinical or clichéd imagery."
-            photoSize="wide"
+            photoNode={<IndianWomenIllustration />}
           >
             <p>
               For millions of women, safe and dignified disposal is still
@@ -137,6 +139,15 @@ export default function Home({ activePath }) {
           <h2>Menstrual waste is a growing problem, not a shrinking one</h2>
           <StatCounters stats={EDUCATION_SHORT.stats} />
           <p style={{ marginTop: 24 }}>{EDUCATION_SHORT.approaches}</p>
+        </Reveal>
+      </section>
+
+      {/* What we're fighting — improper disposal today vs. SMART Kojin */}
+      <section className="section">
+        <Reveal as="div" className="container" style={{ textAlign: "center" }}>
+          <p className="eyebrow">What We&apos;re Fighting</p>
+          <h2>Across India, sanitary waste still goes nowhere good.</h2>
+          <WhatWeFight />
         </Reveal>
       </section>
 
@@ -206,6 +217,18 @@ export default function Home({ activePath }) {
                 icon={<IndustryIcon slug={ind.slug} />}
               />
             ))}
+          </div>
+        </Reveal>
+      </section>
+
+      {/* Three Kinds of Dignity — the emotional payoff of the whole page */}
+      <section className="section" style={{ background: "linear-gradient(135deg,#f1f8e8 0%,#e7f3d6 55%,#d9edc4 100%)" }}>
+        <Reveal as="div" className="container" style={{ textAlign: "center" }}>
+          <p className="eyebrow">What One Machine Changes</p>
+          <h2>One incinerator. Three kinds of dignity.</h2>
+          <p className="lead">A single SMART Kojin unit changes the room for everyone in it — not just the person using it.</p>
+          <div style={{ marginTop: 32 }}>
+            <ThreeDignities />
           </div>
         </Reveal>
       </section>

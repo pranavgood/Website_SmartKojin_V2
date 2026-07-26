@@ -207,7 +207,7 @@ export function LogoWall({ names }) {
 
 // Big image + text editorial block, Apple/press-kit style. `reverse` flips
 // which side the photo sits on.
-export function Statement({ eyebrow, heading, children, photoCaption, photoSize, reverse }) {
+export function Statement({ eyebrow, heading, children, photoCaption, photoSize, reverse, photoNode }) {
   return (
     <div className={`statement-grid ${reverse ? "reverse" : ""}`.trim()}>
       <div className="statement-text">
@@ -216,7 +216,7 @@ export function Statement({ eyebrow, heading, children, photoCaption, photoSize,
         {children}
       </div>
       <div className="statement-photo">
-        <PhotoSlot caption={photoCaption} size={photoSize} />
+        {photoNode || <PhotoSlot caption={photoCaption} size={photoSize} />}
       </div>
     </div>
   );
@@ -349,5 +349,111 @@ export function StepIcon({ index, size = 48 }) {
     <svg className="icon-badge floaty" width={size} height={size} viewBox="0 0 72 72">
       {inner}
     </svg>
+  );
+}
+
+// Flat-illustration crowd of Indian women — original drawing (not traced
+// from any reference image), warm radiant palette, used in the homepage
+// "Real Problem" section. Approved direction: "Concept v4 — Indian Women,
+// Illustration + Graffiti Accents."
+export function IndianWomenIllustration() {
+  return (
+    <svg viewBox="0 0 900 220" width="100%" height="auto" style={{ display: "block", maxWidth: 820, margin: "0 auto" }} role="img" aria-label="Flat illustration of a group of Indian women, warm radiant color palette">
+      <title>A group of Indian women, flat illustration style</title>
+      <ellipse cx="450" cy="230" rx="480" ry="90" fill="#f6cdb4" opacity="0.55" />
+      <g transform="translate(20,40)"><path d="M0 180 Q0 100 60 95 Q120 100 120 180 Z" fill="#e8927a" /><circle cx="60" cy="55" r="42" fill="#8a4a2f" /><path d="M20 40 Q60 4 100 40 Q104 60 92 66 L92 50 Q60 32 28 50 L28 66 Q16 60 20 40Z" fill="#241a12" /><path d="M88 66 Q98 100 92 150 Q86 152 84 148 Q90 100 80 68Z" fill="#241a12" /><circle cx="60" cy="58" r="2.6" fill="#b3242f" /></g>
+      <g transform="translate(115,15)"><path d="M5 205 Q5 118 70 112 Q135 118 135 205 Z" fill="#7fb8d6" /><circle cx="70" cy="75" r="44" fill="#c97a52" /><path d="M20 66 Q70 14 120 66 Q132 130 104 156 Q116 96 70 84 Q24 96 36 156 Q8 130 20 66Z" fill="#f3ded0" /><path d="M104 96 Q128 120 118 170" stroke="#f3ded0" strokeWidth="14" fill="none" strokeLinecap="round" /><circle cx="70" cy="78" r="2.6" fill="#8a1f1f" /></g>
+      <g transform="translate(245,0)"><path d="M8 220 Q8 128 78 122 Q148 128 148 220 Z" fill="#e2565a" /><path d="M110 128 Q150 150 138 210 L118 206 Q126 158 100 138Z" fill="#8dc63f" /><circle cx="78" cy="90" r="46" fill="#5c3420" /><circle cx="78" cy="56" r="30" fill="#1c130c" /><path d="M50 58 Q78 40 106 58 Q108 76 96 80 Q100 60 78 58 Q56 60 60 80 Q48 76 50 58Z" fill="#1c130c" /><circle cx="78" cy="94" r="2.8" fill="#b3242f" /></g>
+      <g transform="translate(390,25)"><path d="M2 195 Q2 108 66 102 Q130 108 130 195 Z" fill="#8dc63f" /><circle cx="66" cy="66" r="42" fill="#f6ddc4" /><path d="M28 50 Q66 12 104 50 Q108 74 96 80 Q100 46 66 46 Q32 46 36 80 Q24 74 28 50Z" fill="#3a2a18" /><circle cx="66" cy="30" r="15" fill="#3a2a18" /><circle cx="66" cy="68" r="2.6" fill="#b3242f" /><circle cx="42" cy="120" r="3" fill="#e0c15a" /><circle cx="90" cy="120" r="3" fill="#e0c15a" /></g>
+      <g transform="translate(515,10)"><path d="M5 210 Q5 120 72 114 Q139 120 139 210 Z" fill="#f2a9b8" /><circle cx="72" cy="78" r="45" fill="#e0a479" /><path d="M24 64 Q72 14 120 64 Q132 148 108 172 Q98 100 72 92 Q46 100 36 172 Q12 148 24 64Z" fill="#241a12" /></g>
+      <g transform="translate(650,30)"><path d="M4 190 Q4 106 64 100 Q124 106 124 190 Z" fill="#e8927a" /><circle cx="64" cy="64" r="41" fill="#e7b98d" /><path d="M28 50 Q64 10 100 50 Q104 68 92 74 L92 56 Q64 40 36 56 L36 74 Q24 68 28 50Z" fill="#f4ede3" /><circle cx="64" cy="68" r="2.4" fill="#8a1f1f" /></g>
+      <g transform="translate(770,45)"><path d="M2 180 Q2 100 58 94 Q114 100 114 180 Z" fill="#7fb8d6" /><circle cx="58" cy="60" r="38" fill="#8a4a2f" /><path d="M24 46 Q58 12 92 46 Q94 62 84 66 Q88 44 58 42 Q28 44 32 66 Q22 62 24 46Z" fill="#1c130c" /><circle cx="30" cy="72" r="3" fill="#e0c15a" /><circle cx="86" cy="72" r="3" fill="#e0c15a" /></g>
+    </svg>
+  );
+}
+
+// Two-panel "what we're fighting" — improper disposal today vs. SMART Kojin.
+export function WhatWeFight() {
+  return (
+    <div className="what-we-fight-grid">
+      <div className="what-we-fight-panel">
+        <svg width="100%" height="110" viewBox="0 0 260 110">
+          <ellipse cx="130" cy="98" rx="110" ry="9" fill="#d8d4c8" />
+          <path d="M60 92 Q40 74 60 58 Q80 70 96 56 Q114 72 100 90 Q80 98 60 92Z" fill="#c7c2b3" />
+          <path d="M150 36 Q158 26 168 34" stroke="#b7b0a0" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.7" />
+          <path d="M160 26 Q168 14 180 22" stroke="#b7b0a0" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.5" />
+        </svg>
+        <p className="eyebrow" style={{ marginTop: 16 }}>Today, mostly</p>
+        <h3>Thrown loose. Buried. Burned in the open.</h3>
+        <p style={{ color: "var(--grey)", fontSize: "0.95rem" }}>
+          Most used sanitary waste in India is discarded with general trash or burned uncontrolled — releasing exactly the toxic smoke everyone&apos;s trying to avoid.
+        </p>
+      </div>
+      <div className="what-we-fight-panel what-we-fight-panel--positive">
+        <svg width="100%" height="110" viewBox="0 0 260 110">
+          <ellipse cx="130" cy="98" rx="110" ry="9" fill="#cfe6a8" />
+          <path d="M78 90 Q60 72 78 56 Q94 68 108 54 Q124 70 112 88 Q94 96 78 90Z" fill="#8dc63f" opacity="0.85" />
+          <rect x="140" y="24" width="46" height="70" rx="8" fill="#4f7a1f" />
+          <rect x="148" y="34" width="30" height="14" rx="3" fill="#eef7e2" />
+          <path d="M112 60 Q128 50 146 48" stroke="#4f7a1f" strokeWidth="2.5" fill="none" strokeDasharray="3 4" strokeLinecap="round" />
+        </svg>
+        <p className="eyebrow" style={{ marginTop: 16, color: "var(--green-dark)" }}>With SMART Kojin</p>
+        <h3>Destroyed on the spot. Gone in 3 minutes.</h3>
+        <p style={{ color: "var(--grey)", fontSize: "0.95rem" }}>
+          Load it, and it&apos;s incinerated immediately at 800–900°C with treated air — nothing stored, nothing transported, nothing left to bury or burn in the open.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+// "Three Kinds of Dignity" — cleaning-staff dignity, women's dignity,
+// environmental happiness. Same flat-illustration language as the industry
+// and step icons above.
+export function ThreeDignities() {
+  return (
+    <div className="card-grid" style={{ textAlign: "left" }}>
+      <div className="card">
+        <svg width="64" height="64" viewBox="0 0 72 72" style={{ marginBottom: 12 }}>
+          <circle cx="36" cy="36" r="36" fill="#eef7e2" />
+          <circle cx="17" cy="55" r="1.6" fill="#b8c9a3" /><circle cx="21" cy="57" r="1.2" fill="#b8c9a3" /><circle cx="14" cy="58" r="1" fill="#b8c9a3" />
+          <line x1="50" y1="18" x2="27" y2="53" stroke="#a97c50" strokeWidth="2.4" strokeLinecap="round" />
+          <path d="M22 58 L27 53 L34 55 L27 62 Z" fill="#e0c15a" />
+          <path d="M28 44 Q30 30 42 30 Q50 31 49 42 Q49 50 40 52 L30 50 Z" fill="#8dc63f" />
+          <circle cx="41" cy="21" r="9" fill="#c97a52" />
+          <path d="M33 18 Q41 8 49 18 Q50 24 46 25 Q47 17 41 16 Q35 17 36 25 Q32 24 33 18Z" fill="#2e2016" />
+          <path d="M44 30 Q49 24 52 19" stroke="#c97a52" strokeWidth="4" fill="none" strokeLinecap="round" />
+        </svg>
+        <h4>Dignity for cleaning staff</h4>
+        <p>No one has to touch, sort, or transport used waste by hand. A hard, humiliating part of the job simply disappears.</p>
+      </div>
+      <div className="card">
+        <svg width="64" height="64" viewBox="0 0 72 72" style={{ marginBottom: 12 }}>
+          <circle cx="36" cy="36" r="36" fill="#fbe4d9" />
+          <path d="M18 58 Q18 40 36 38 Q54 40 54 58 Z" fill="#f2a9b8" />
+          <circle cx="36" cy="26" r="14" fill="#8a4a2f" />
+          <path d="M22 22 Q36 2 50 22 Q52 34 44 37 Q46 24 36 22 Q26 24 28 37 Q20 34 22 22Z" fill="#2e2016" />
+          <circle cx="36" cy="30" r="1.8" fill="#b3242f" />
+          <path d="M32 32 Q36 35 40 32" stroke="#8a4a2f" strokeWidth="1.4" fill="none" strokeLinecap="round" />
+          <path d="M56 16 L57.5 20 L61.5 21.5 L57.5 23 L56 27 L54.5 23 L50.5 21.5 L54.5 20 Z" fill="#e2565a" />
+        </svg>
+        <h4>Dignity for women</h4>
+        <p>Safe, private, stigma-free disposal in seconds — no bin to be seen near, no awkward walk, no second thought.</p>
+      </div>
+      <div className="card">
+        <svg width="64" height="64" viewBox="0 0 72 72" style={{ marginBottom: 12 }}>
+          <circle cx="36" cy="36" r="36" fill="#e3f0f7" />
+          <circle cx="18" cy="16" r="2" fill="#a9dc63" /><circle cx="55" cy="14" r="1.6" fill="#a9dc63" /><circle cx="60" cy="34" r="1.6" fill="#a9dc63" />
+          <circle cx="36" cy="38" r="20" fill="#7fb8d6" />
+          <path d="M20 30 Q28 24 34 30 Q30 36 24 34 Q20 36 20 30Z" fill="#8dc63f" />
+          <path d="M38 26 Q48 24 52 32 Q46 34 42 30 Q38 30 38 26Z" fill="#8dc63f" />
+          <path d="M26 42 Q34 38 42 44 Q50 46 48 52 Q38 56 30 52 Q24 48 26 42Z" fill="#6fae2e" />
+          <circle cx="30" cy="36" r="1.6" fill="#2e332d" /><circle cx="42" cy="36" r="1.6" fill="#2e332d" />
+          <path d="M29 42 Q36 47 43 42" stroke="#2e332d" strokeWidth="2" fill="none" strokeLinecap="round" />
+        </svg>
+        <h4>A happier environment</h4>
+        <p>No landfill plastic, no open burning, no toxic smoke — just ash, in about three minutes, with nothing left to bury.</p>
+      </div>
+    </div>
   );
 }

@@ -82,6 +82,8 @@ h3 { font-size: 1.3rem; }
 .site-header { position: sticky; top: 0; background: var(--paper-2); box-shadow: 0 1px 0 rgba(0,0,0,0.06); z-index: 100; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; position: relative; }
 .logo img { height: 40px; }
+.site-logo-img { width: auto; display: block; }
+.footer-logo img.site-logo-img { height: 46px; }
 .main-nav ul { list-style: none; display: flex; gap: 26px; margin: 0; padding: 0; align-items: center; flex-wrap: wrap; }
 .main-nav a { color: var(--text); font-weight: 600; font-size: 0.95rem; }
 .main-nav a.active, .main-nav a:hover { color: var(--green-dark); text-decoration: none; }
@@ -172,6 +174,15 @@ h3 { font-size: 1.3rem; }
 .credibility-label { font-size: 0.74rem; color: var(--grey); text-transform: uppercase; letter-spacing: 0.6px; }
 .powered-by-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text); }
 .powered-by-badge img { height: 18px; }
+@media (max-width: 640px) {
+  .credibility-inner { flex-direction: column; gap: 18px; }
+  .credibility-brand { padding-right: 0; margin-right: 0; border-right: none; padding-bottom: 14px; border-bottom: 1px solid #ecece6; width: 100%; justify-content: center; }
+  .credibility-item { border-left: none !important; padding: 0 16px; }
+}
+.what-we-fight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: left; margin-top: 32px; }
+@media (max-width: 700px) { .what-we-fight-grid { grid-template-columns: 1fr; } }
+.what-we-fight-panel { background: #eeece6; padding: 34px 30px; }
+.what-we-fight-panel--positive { background: linear-gradient(135deg,#f1f8e8 0%,#dceec4 100%); }
 
 /* USP strip */
 .usp-strip { background: var(--paper-2); padding: 30px 0; border-bottom: 1px solid #ecece6; }

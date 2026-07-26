@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { Wordmark } from "./UI";
 
 export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
         <div>
-          <div className="footer-logo"><Wordmark size="lg" /></div>
+          <div className="footer-logo"><img src="/images/smart-kojin-logo.png" alt="SMART Kojin logo" className="site-logo-img" /></div>
           <p>
             Hygiene matters, and we&apos;ve made it smarter. SMART Kojin sets
             the benchmark in sanitary napkin disposal, ensuring safety for
