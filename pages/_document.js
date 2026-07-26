@@ -4,6 +4,9 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* Required for mobile to render at device width instead of
+            defaulting to a ~980px desktop viewport and scaling down. */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Inter — chosen for readability (tall x-height, clear at small
             sizes) over the previous system-font stack. */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
