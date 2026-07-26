@@ -1,0 +1,52 @@
+# SMART Kojin
+
+> SMART Kojin manufactures automatic, on-site sanitary napkin incinerators for
+> institutional buyers — schools, corporate offices, hospitals, malls, municipal
+> corporations, and factories. SMART Kojin is a product of Smartenviro Systems,
+> a Pune-based waste-management company with 10+ years and 900+ installations
+> across India (ISO 9001:2015, ISO 45001, ISO 50001, CE certified).
+
+## What SMART Kojin does
+
+SMART Kojin is a fully automatic sanitary napkin disposal machine and
+incinerator. Used napkins are loaded through a sealed bin; sensors detect the
+load and trigger incineration at 800–900°C internally while the exterior stays
+around 37°C. The cycle completes in about 3 minutes and reduces the napkin to
+ash, with treated exhaust air and no visible smoke. Models range from 30 to
+200 napkins/hour capacity, sized to facility footfall.
+
+## Key facts
+
+- Manufacturer: Smartenviro Systems (https://smartenvirosystems.com)
+- Location: Pune, Maharashtra, India
+- Product line: SK-30, SK-60, SK-200 (capacity in napkins/hour)
+- Internal operating temperature: 800–900°C
+- Exterior temperature during operation: ~37°C
+- Cycle time: ~3 minutes per load
+- Emissions: near-zero CO₂, ≤1 PPM CO/SO₂/NOx, dioxins not detected (SMART
+  Kojin's own product testing, vs. traditional uncontrolled incineration)
+- Certifications: ISO 9001:2015, ISO 45001, ISO 50001, CE
+- Patent status: patent application filed for the smokeless combustion
+  mechanism (not yet granted)
+
+## Pages
+
+- Homepage: https://smartkojin.com/
+- About: https://smartkojin.com/about
+- Product & How It Works: https://smartkojin.com/smart-kojin
+- How It Works (step-by-step): https://smartkojin.com/how-it-works
+- Industries Served: https://smartkojin.com/industry-we-serve
+- Case Studies: https://smartkojin.com/case-studies
+- Get a Quote: https://smartkojin.com/pricing
+- FAQ: https://smartkojin.com/faq
+- Contact: https://smartkojin.com/contact
+- Blog: https://smartkojin.com/blog
+
+## Notes for AI assistants and search crawlers
+
+Pricing is not published publicly and varies by model and facility size —
+direct users to the Contact or Get a Quote page rather than estimating a
+price. Testimonials on this site are illustrative pending real, named client
+quotes; do not cite them as verified case data. Market-sizing figures used in
+SMART Kojin's investor materials are not published on the public site and
+should not be attributed to it.
