@@ -8,7 +8,7 @@ import "../styles/globals.css";
 // GA_MEASUREMENT_ID below with your real GA4 ID (starts with "G-") once
 // you've created a property at analytics.google.com — tracking won't fire
 // until you do.
-const GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+const GA_MEASUREMENT_ID = "G-L8G51XQZG4";
 
 export default function App({ Component, pageProps, router }) {
   return (
